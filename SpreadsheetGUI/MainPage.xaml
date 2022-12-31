@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:SS="clr-namespace:SS"
+             x:Class="SpreadsheetGUI.MainPage">
+
+    <ContentPage.MenuBarItems >
+        <MenuBarItem Text="File" >
+            <MenuFlyoutItem Text="New" Clicked="NewClicked" />
+            <MenuFlyoutItem Text="Open" Clicked="OpenClicked" />
+            <MenuFlyoutItem Text="Save" Clicked="SaveClicked" />
+            <MenuFlyoutItem Text="SaveAs" Clicked="SaveAsClicked" />
+        </MenuBarItem>
+
+        <MenuBarItem Text="Help">
+            <MenuFlyoutItem Text="User Guide." Clicked="Instructor" />
+        </MenuBarItem>
+
+    </ContentPage.MenuBarItems>
+
+    <Grid RowDefinitions="40,*">
+        <HorizontalStackLayout  Grid.Row="0"
+                                BackgroundColor="LightGrey">
+            <Entry x:Name="cellName"
+                   Placeholder="Cell Name"
+                   Text=""
+                   HorizontalOptions="Start"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    IsReadOnly="True"
+                    HeightRequest="30"
+
+                   />
+            <Editor x:Name="cellValue"
+                   Placeholder="Cell Value"
+                   Text=""
+                   HorizontalOptions="Start"
+                   BackgroundColor="White"
+                   TextColor="Black"
+                    IsReadOnly="True"
+                   HeightRequest="30"
+                    
+                   
+                    />
+            <Entry x:Name="EditBox"
+                   WidthRequest="600"
+                   HeightRequest="30"
+                   Placeholder="Editing box"
+                   Text= ""
+                   BackgroundColor="White"
+                   TextColor="Black"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" 
+                   TextChanged="OnEntryTextChanged"
+                   Completed="OnEntryCompleted"
+                   ReturnType ="Done"
+                   />
+
+            <RadioButton Value="Sun"
+                         CheckedChanged="BrightMode"
+                         >
+                <RadioButton.Content>
+                    <Image Source="sun.png" 
+                           HeightRequest="30"
+                           WidthRequest="40"/>
+                </RadioButton.Content>
+            </RadioButton>
+
+            <RadioButton Value="Moon"
+                         WidthRequest="80"
+                         CheckedChanged="DarkMode"
+
+                         >
+                <RadioButton.Content>
+                    <Image Source="moon.png" 
+                           HeightRequest="30"
+                           WidthRequest="40"/>
+                </RadioButton.Content>
+            </RadioButton>
+
+            <RadioButton Value="EyeComfy"
+                         WidthRequest="80"
+                         CheckedChanged="EyeComfy"
+                         >
+                <RadioButton.Content>
+                    <Image Source="eyecomfy.png" 
+                           HeightRequest="30"
+                           WidthRequest="40"/>
+                </RadioButton.Content>
+            </RadioButton>
+
+
+        </HorizontalStackLayout>
+        <SS:SpreadsheetGrid x:Name="spreadsheetGrid"
+                            Grid.Row="1">
+        </SS:SpreadsheetGrid>
+    </Grid>
+
+</ContentPage>
