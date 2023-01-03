@@ -3,7 +3,7 @@
 This is the first version of the program that implements a simple spreadsheet for PS6. This program allows you to work on simple Excel documents. 
 
 - Editor: Mingyu Jung
-- Version: ps6
+- Version: 2.0
 
 ## Features
 
