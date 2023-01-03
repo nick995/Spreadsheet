@@ -1,5 +1,6 @@
 # Spreadsheet GUI
 # THIS REPOSITORY WILL BE PRIVATE ASAP
+# DO NOT COPY
 
 This is the first version of the program that implements a simple spreadsheet for PS6. This program allows you to work on simple Excel documents. 
 
