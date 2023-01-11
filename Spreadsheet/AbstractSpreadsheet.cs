@@ -1,5 +1,4 @@
-﻿// Written by Joe Zachary for CS 3500, September 2012
-// Version 1.8
+﻿// Version 1.8
 // Revision history:  
 //   Version 1.1 9/20/12 12:59 p.m.  Fixed comment that describes circular dependencies
 //   Version 1.2 9/20/12 1:38 p.m.   Changed return type of GetCellContents to object
@@ -162,8 +161,6 @@ namespace SS
             this.Version = version;
         }
 
-
-        // ADDED FOR PS5
         /// <summary>
         /// Writes the contents of this spreadsheet to the named file using a JSON format.
         /// The JSON object should have the following fields:
@@ -199,7 +196,6 @@ namespace SS
         /// </summary>
         public abstract void Save(string filename);
 
-        // ADDED FOR PS5
         /// <summary>
         /// If name is invalid, throws an InvalidNameException.
         /// 
@@ -221,7 +217,6 @@ namespace SS
         /// </summary>
         public abstract object GetCellContents(string name);
 
-        // ADDED FOR PS5
         /// <summary>
         /// Otherwise, if name is invalid, throws an InvalidNameException.
         /// 
@@ -254,7 +249,6 @@ namespace SS
         /// </summary>
         public abstract IList<string> SetContentsOfCell(string name, string content);
 
-        // MODIFIED PROTECTION FOR PS5
         /// <summary>
         /// The contents of the named cell becomes number.  The method returns a
         /// list consisting of name plus the names of all other cells whose value depends, 
@@ -267,7 +261,6 @@ namespace SS
         /// </summary>
         protected abstract IList<string> SetCellContents(string name, double number);
 
-        // MODIFIED PROTECTION FOR PS5
         /// <summary>
         /// The contents of the named cell becomes text.  The method returns a
         /// list consisting of name plus the names of all other cells whose value depends, 
@@ -280,7 +273,6 @@ namespace SS
         /// </summary>
         protected abstract IList<string> SetCellContents(string name, string text);
 
-        // MODIFIED PROTECTION FOR PS5
         /// <summary>
         /// If changing the contents of the named cell to be the formula would cause a 
         /// circular dependency, throws a CircularException, and no change is made to the spreadsheet.

@@ -1,7 +1,5 @@
-﻿// CS3500 PS5
-// September, 30th, 2022
+﻿// September, 30th, 2022
 // MinGyu Jung
-// PASSED ALL GRADING TEST VERSION.
 
 using Microsoft.VisualBasic;
 using Newtonsoft.Json;
@@ -75,7 +73,6 @@ namespace SS
         //bool for distinguish if it is modified or not.
         private bool changed;
 
-        //===================================================PS5==========================================
 
         //Constructure.
         /// <summary>
@@ -90,7 +87,6 @@ namespace SS
             Changed = false;
         }
 
-        // ADDED FOR PS5
         /// <summary>
         /// Constructs an abstract spreadsheet by recording its variable validity test,
         /// its normalization method, and its version information.  The variable validity
@@ -167,7 +163,6 @@ namespace SS
             Changed = false;
         }
 
-        // ADDED FOR PS5
         /// <summary>
         /// True if this spreadsheet has been modified since it was created or saved                  
         /// (whichever happened most recently); false otherwise.
@@ -184,8 +179,6 @@ namespace SS
             }
         }
 
-
-        // ADDED FOR PS5
         /// <summary>
         /// Writes the contents of this spreadsheet to the named file using a JSON format.
         /// The JSON object should have the following fields:
@@ -237,7 +230,6 @@ namespace SS
             Changed = false;
         }
 
-        // ADDED FOR PS5
         /// <summary>
         /// If name is invalid, throws an InvalidNameException.
         /// 
@@ -263,7 +255,6 @@ namespace SS
                 return "";
             }
         }
-        // ADDED FOR PS5
         /// <summary>
         /// Otherwise, if name is invalid, throws an InvalidNameException.
         /// 
@@ -354,10 +345,6 @@ namespace SS
             }
             return dependencyList;
         }
-        //===================================================PS5 END==========================================
-
-
-        //=============================================PS4 parts=======================================
 
         /// <summary>
         /// Enumerates the names of all the non-empty cells in the spreadsheet.
@@ -375,8 +362,6 @@ namespace SS
             }
             return nonEmptyCells;
         }
-
-
 
         /// <summary>
         /// If name is invalid, throws an InvalidNameException.
@@ -586,7 +571,6 @@ namespace SS
                 this.Type = CellType.temp;
                 this.stringForm = "";
             }
-            //======================Added for PS5=============================
             //Helper method
             /// <summary>
             /// For re-evaluating formulas.

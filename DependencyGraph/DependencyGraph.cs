@@ -1,11 +1,4 @@
-﻿// Skeleton implementation written by Joe Zachary for CS 3500, September 2013.
-// Version 1.1 (Fixed error in comment for RemoveDependency.)
-// Version 1.2 - Daniel Kopta 
-//               (Clarified meaning of dependent and dependee.)
-//               (Clarified names in solution/project structure.)
-
-// Version 1.3 - MinGyu Jung
-// CS3500 PS2
+﻿// MinGyu Jung
 // September, 9th, 2022
 
 using System;
@@ -15,7 +8,6 @@ using System.Text;
 
 namespace SpreadsheetUtilities
 {
-
     /// <summary>
     /// (s1,t1) is an ordered pair of strings
     /// t1 depends on s1; s1 must be evaluated before t1
@@ -61,7 +53,6 @@ namespace SpreadsheetUtilities
 
         }
 
-
         /// <summary>
         /// The number of ordered pairs in the DependencyGraph.
         /// </summary>
@@ -70,7 +61,6 @@ namespace SpreadsheetUtilities
             // Reference: https://stackoverflow.com/questions/11954608/count-values-in-dictionary-using-linq-and-linq-extensions
             get { return dependentDic.Values.Sum(list => list.Count); }
         }
-
 
         /// <summary>
         /// The size of dependees(s).
@@ -176,7 +166,6 @@ namespace SpreadsheetUtilities
             }
         }
 
-
         /// <summary>   e
         /// Removes the ordered pair (s,t), if it exists
         /// </summary>
@@ -196,7 +185,6 @@ namespace SpreadsheetUtilities
 
         }
 
-
         /// <summary>
         /// Removes all existing ordered pairs of the form (s,r).  Then, for each
         /// t in newDependents, adds the ordered pair (s,t).
@@ -212,7 +200,6 @@ namespace SpreadsheetUtilities
                 AddDependency(s, newVal);
             }
         }
-
 
         /// <summary>
         /// Removes all existing ordered pairs of the form (r,s).  Then, for each 
@@ -230,8 +217,6 @@ namespace SpreadsheetUtilities
                 AddDependency(newVal, s);
             }
         }
-
-
 
     }
 

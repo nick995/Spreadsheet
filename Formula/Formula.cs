@@ -1,12 +1,4 @@
-﻿// Skeleton written by Profs Zachary, Kopta and Martin for CS 3500
-// Read the entire skeleton carefully and completely before you
-// do anything else!
-
-// Change log:
-// Last updated: 9/8, updated for non-nullable types
-
-/// Min-Gyu Jung
-/// CS 3500
+﻿/// Min-Gyu Jung
 /// September 16, 2022
 
 using System;

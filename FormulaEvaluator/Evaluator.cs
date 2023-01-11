@@ -1,8 +1,5 @@
 ﻿/// Min-Gyu Jung
-/// CS 3500
 /// September 02, 2022
-
-
 using System.Text.RegularExpressions;
 
 namespace FormulaEvaluator

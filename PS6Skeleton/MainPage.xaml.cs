@@ -11,7 +11,6 @@ using Windows.Storage.Pickers;
 
 /**
  *  MinGyu Jung & SangYoon Cho.
- *  PS6
  *  Oct, 21, 2022
  * 
  * Version 1.0   update- when user complete the enter in EditBox, it goes down just like spreadsheet.
